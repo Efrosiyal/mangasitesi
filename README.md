@@ -1,10 +1,10 @@
-Manga Sitesi - Kurulum Talimatları
-Ön Gereksinimler
-Node.js (v18 veya üzeri)
-npm (Node Package Manager)
-Git
-Adım Adım Kurulum
-Projeyi Klonlama
+#Manga Sitesi - Kurulum Talimatları
+#Ön Gereksinimler
+#Node.js (v18 veya üzeri)
+#npm (Node Package Manager)
+#Git
+#Adım Adım Kurulum
+#Projeyi Klonlama
 Bağımlılıkları Yükleme
 Ortam Değişkenlerini Ayarlama
 .env dosyasını kendi ortamınıza göre düzenleyin
