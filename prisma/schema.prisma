@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  username  String   @unique
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  favorites Manga[]  @relation("UserFavorites")
+  readings  Reading[]
+}
+
+model Manga {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  coverImage  String
+  author      String
+  status      Status   @default(ONGOING)
+  genres      Genre[]
+  chapters    Chapter[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  favorites   User[]   @relation("UserFavorites")
+}
+
+model Chapter {
+  id        String   @id @default(cuid())
+  number    Int
+  title     String?
+  pages     Page[]
+  mangaId   String
+  manga     Manga    @relation(fields: [mangaId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  readings  Reading[]
+}
+
+model Page {
+  id        String   @id @default(cuid())
+  number    Int
+  imageUrl  String
+  chapterId String
+  chapter   Chapter  @relation(fields: [chapterId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Reading {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  chapterId String
+  chapter   Chapter  @relation(fields: [chapterId], references: [id])
+  lastPage  Int      @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Status {
+  ONGOING
+  COMPLETED
+  HIATUS
+}
+
+enum Genre {
+  ACTION
+  ADVENTURE
+  COMEDY
+  DRAMA
+  FANTASY
+  HORROR
+  MYSTERY
+  ROMANCE
+  SCIFI
+  SLICE_OF_LIFE
+  SPORTS
+  SUPERNATURAL
+} 
