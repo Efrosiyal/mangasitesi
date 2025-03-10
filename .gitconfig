@@ -2,7 +2,7 @@
 	editor = \"C:\\Users\\ben\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
 [user]
 	name = bugrakadioglu
-	email = bugrakadioglu@elmaligroup.com
+	email = 
 	password = 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
