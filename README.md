@@ -35,7 +35,7 @@ Uygulama varsayılan olarak http://localhost:3000 adresinde çalışacaktır.
 5. Docker ile Çalıştırma (Opsiyonel)
 Eğer Docker kullanmak isterseniz, aşağıdaki komutları kullanabilirsiniz:
 ```docker-compose up --build```
-Önemli Notlar
+### Önemli Notlar
 Projeyi ilk kez çalıştırırken tüm bağımlılıkların yüklenmesi biraz zaman alabilir.
 
 Herhangi bir hata durumunda node_modules klasörünü silip npm install komutunu tekrar çalıştırabilirsiniz.
