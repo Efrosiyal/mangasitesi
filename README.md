@@ -14,11 +14,11 @@ Projeyi bilgisayarınıza klonlamak için aşağıdaki komutu kullanın:
 
 bash
 ```git clone https://github.com/Efrosiyal/mangasitesi.git```
-2. Bağımlılıkları Yükleme
+### 2. Bağımlılıkları Yükleme
 Proje dizinine gidin ve bağımlılıkları yükleyin:```
 cd mangasitesi
 npm install```
-3. Ortam Değişkenlerini Ayarlama
+### 3. Ortam Değişkenlerini Ayarlama
 .env dosyasını kendi ortamınıza göre düzenleyin. Örnek bir .env dosyası aşağıdaki gibi olabilir:
 # Veritabanı Ayarları
 ```
