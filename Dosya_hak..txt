@@ -1,0 +1,35 @@
+Bu proje bir manga sitesi için Next.js kullanılarak geliştirilmiş bir web uygulaması. İşte kodun detaylı analizi:
+Teknoloji Stack'i:
+Next.js (React framework'ü)
+TypeScript
+Tailwind CSS (stil için)
+Prisma (veritabanı ORM'i)
+Docker (konteynerizasyon için)
+Ana Sayfa Yapısı (page.tsx):
+'use client' direktifi ile client-side rendering kullanılıyor
+Responsive bir tasarım mevcut (grid sistemi ile)
+3 ana bölüm bulunuyor:
+Öne Çıkan Mangalar
+Son Eklenenler
+En Popüler
+Kategori sistemi mevcut (6 farklı kategori)
+Bağımlılıklar:
+React ve Next.js core bağımlılıkları
+Tailwind CSS için gerekli konfigürasyonlar
+TypeScript desteği
+Prisma veritabanı entegrasyonu
+Stil ve Tasarım:
+Tailwind CSS kullanılarak modern ve responsive bir tasarım oluşturulmuş
+Grid sistemi ile farklı ekran boyutlarına uyumlu layout
+Gölgeler, yuvarlak köşeler ve hover efektleri ile modern bir görünüm
+Planlanan Özellikler:
+Manga listesi gösterimi (şu an "Yakında eklenecek..." placeholder'ı mevcut)
+Kategori bazlı manga filtreleme
+Popüler ve yeni eklenen mangaları listeleme
+Veritabanı Yapısı:
+Prisma ORM kullanılıyor
+Docker ile veritabanı konteynerizasyonu yapılmış
+Routing:
+Next.js'in yeni app router sistemi kullanılıyor
+Kategoriler için dinamik routing planlanmış (/kategori/[kategoriAdi])
+Bu kod şu anda bir başlangıç aşamasında görünüyor ve temel yapı kurulmuş durumda. Manga verilerinin eklenmesi ve backend entegrasyonu ile tam fonksiyonel bir manga sitesine dönüşecek şekilde tasarlanmış.
